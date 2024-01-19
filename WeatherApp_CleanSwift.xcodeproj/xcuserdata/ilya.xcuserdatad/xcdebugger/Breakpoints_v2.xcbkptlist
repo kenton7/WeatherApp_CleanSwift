@@ -77,8 +77,8 @@
             filePath = "WeatherApp_CleanSwift/ForecastScreen/ForecastInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "fetchForecast(latitude:longitude:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -93,8 +93,8 @@
             filePath = "WeatherApp_CleanSwift/ForecastScreen/ForecastVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "283"
-            endingLineNumber = "283"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
             landmarkName = "displayCurrentWeather(data:)"
             landmarkType = "7">
          </BreakpointContent>

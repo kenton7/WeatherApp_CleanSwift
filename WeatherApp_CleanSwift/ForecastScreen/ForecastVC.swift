@@ -234,13 +234,17 @@ final class ForecastVC: UIViewController {
         setup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        interactor?.fetchForecast(latitude: latitude ?? 0.0, longitude: longitude ?? 0.0)
+        interactor?.fetchCurrentWeather(latitude: latitude ?? 0.0, longitude: longitude ?? 0.0)
+    }
+    
     private func setup() {
         let viewController = self
         let presenter = ForecastPresenter()
         let interactor = ForecastInteractor()
         interactor.presenter = presenter
-        interactor.fetchForecast(latitude: latitude ?? 0.0, longitude: longitude ?? 0.0)
-        interactor.fetchCurrentWeather(latitude: latitude ?? 0.0, longitude: longitude ?? 0.0)
         presenter.forecastViewController = viewController
         viewController.interactor = interactor
     }

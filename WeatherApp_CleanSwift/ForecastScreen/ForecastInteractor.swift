@@ -47,7 +47,6 @@ extension ForecastInteractor: ForecastScreenBusinessLogic {
                 let calendar = Calendar.current
                 let df = DateFormatter()
 
-
                 for _ in forecast.list! {
                     //Фильтруем дату для каждого дня в определенное время,
                     //которое зависит от текущего часа (Например, сейчас 15:00),
