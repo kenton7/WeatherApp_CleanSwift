@@ -38,7 +38,10 @@ extension RealmWorker: RealmWorkerBusinessLogic {
     }
     
     func updateDataInRealm(dataArray: Results<RealmModel>, indexPath: IndexPath, currentWeatherModel: CurrentWeatherModel, completion: @escaping (([RealmModel]) -> Void)) {
-        if dataArray[indexPath.section].temp != currentWeatherModel.main?.temp?.rounded() || dataArray[indexPath.section].id != currentWeatherModel.weather?.first?.id ?? 803 || dataArray[indexPath.section].weatherDescription != currentWeatherModel.weather?.first?.description || dataArray[indexPath.section].dayOrNight != String(currentWeatherModel.weather?.first?.icon?.last ?? "d") {
+        if dataArray[indexPath.section].temp != currentWeatherModel.main?.temp?.rounded() 
+            || dataArray[indexPath.section].id != currentWeatherModel.weather?.first?.id ?? 803
+            || dataArray[indexPath.section].weatherDescription != currentWeatherModel.weather?.first?.description
+            || dataArray[indexPath.section].dayOrNight != String(currentWeatherModel.weather?.first?.icon?.last ?? "d") {
             DispatchQueue.main.async {
                 do {
                     try self.realm.write {

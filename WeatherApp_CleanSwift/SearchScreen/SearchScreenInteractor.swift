@@ -53,7 +53,10 @@ extension SearchScreenInteractor: SearchScreenBusinessLogic {
     }
 
     func locationButtonPressed(longitude: Double, latitude: Double) {
-        currentWeatherService.getCurrentWeather(longitute: longitude, latitude: latitude, units: UserDefaults.standard.string(forKey: "units") ?? "metric", language: .ru) { currentWeatherResult in
+        currentWeatherService.getCurrentWeather(longitute: longitude, 
+                                                latitude: latitude,
+                                                units: UserDefaults.standard.string(forKey: "units") ?? MeasurementsTypes.mertic.rawValue,
+                                                language: .ru) { currentWeatherResult in
             switch currentWeatherResult {
             case .success(let weatherData):
                 let realmfactory = CurrentWeatherFactory.makeRealmModel(weatherData, cityName: weatherData.name)
@@ -72,7 +75,10 @@ extension SearchScreenInteractor: SearchScreenBusinessLogic {
             case .success(let cityData):
                 guard let localNames = cityData.first?.localNames?["ru"], let longitude = cityData.first?.lon, let latitude = cityData.first?.lat else { return }
                 
-                self.currentWeatherService.getCurrentWeather(longitute: longitude, latitude: latitude, units: UserDefaults.standard.string(forKey: "units") ?? "metric", language: .ru) { currentWeatherResult in
+                self.currentWeatherService.getCurrentWeather(longitute: longitude, 
+                                                             latitude: latitude,
+                                                             units: UserDefaults.standard.string(forKey: "units") ?? MeasurementsTypes.mertic.rawValue,
+                                                             language: .ru) { currentWeatherResult in
                     
                     switch currentWeatherResult {
                     case .success(let currentWeatherData):
@@ -97,12 +103,14 @@ extension SearchScreenInteractor: SearchScreenBusinessLogic {
             switch cityResult {
             case .success(let cityData):
                 guard let localName = cityData.first?.localNames?["ru"], let longitude = cityData.first?.lon, let latitude = cityData.first?.lat else { return }
-                self.currentWeatherService.getCurrentWeather(longitute: longitude, latitude: latitude, units: UserDefaults.standard.string(forKey: "units") ?? "metric", language: .ru) { [weak self] currentWeatherResult in
+                self.currentWeatherService.getCurrentWeather(longitute: longitude, 
+                                                             latitude: latitude,
+                                                             units: UserDefaults.standard.string(forKey: "units") ?? MeasurementsTypes.mertic.rawValue,
+                                                             language: .ru) { [weak self] currentWeatherResult in
                     guard let self else { return }
                     switch currentWeatherResult {
                     case .success(let weatherData):
-                        let realmFactory = CurrentWeatherFactory.makeRealmModel(weatherData, cityName: localName)
-                        //TODO: Обновление инфы в Realm по indexPath
+//                        let realmFactory = CurrentWeatherFactory.makeRealmModel(weatherData, cityName: localName)
                         RealmWorker.shared.updateDataInRealm(dataArray: forecastRealm, indexPath: indexPath, currentWeatherModel: weatherData) { model in
                             self.presenter?.presentWeatherInCity(data: model)
                         }

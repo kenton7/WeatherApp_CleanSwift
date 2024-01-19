@@ -107,12 +107,5 @@ final class SearchTableViewCell: UITableViewCell {
         weatherDescriptionLabel.text = model.weatherDescription.capitalizingFirstLetter()
         cityLabel.text = model.cityName
     }
-    
-//    func setupCellNew(_ model: ForecastRealm) {
-//        weatherImage.image = GetWeatherImage.weatherImages(id: model.id, pod: model.dayOrNight)
-//        temperatureLabel.text = "\(Int(model.temp))°"
-//        weatherDescriptionLabel.text = model.weatherDescription.capitalizingFirstLetter()
-//        cityLabel.text = model.cityName
-//    }
 }
 

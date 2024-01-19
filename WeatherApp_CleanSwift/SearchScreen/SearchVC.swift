@@ -87,7 +87,7 @@ class SearchVC: UIViewController {
         }
     }
     
-    func setup() {
+    private func setup() {
         let viewController = self
         let presenter = SearchScreenPresenter()
         let interactor = SearchScreenInteractor()
@@ -129,10 +129,10 @@ extension SearchVC {
 
 //MARK: - SearchViewControllerDisplayLogic
 extension SearchVC: SearchViewControllerDisplayLogic {
+    
     func displayUpdatedWeather(data: [RealmModel]) {
         dataToDisplay.removeAll()
         dataToDisplay.append(contentsOf: data)
-        print(dataToDisplay.first?.cityName)
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }

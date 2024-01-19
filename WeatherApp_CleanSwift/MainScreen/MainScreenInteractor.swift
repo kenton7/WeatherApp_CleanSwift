@@ -55,7 +55,7 @@ extension MainScreenInteractor: MainScreenBusinessLogic {
     func fetchCurrentWeather(latitude: Double, longitude: Double) {
         currentWeatherNetworkService.getCurrentWeather(longitute: longitude,
                                                        latitude: latitude,
-                                                       units: UserDefaults.standard.string(forKey: "units") ?? "metric",
+                                                       units: UserDefaults.standard.string(forKey: "units") ?? MeasurementsTypes.mertic.rawValue,
                                                        language: LanguageType.ru) { [weak self] currentWeatherResult in
             guard let self else { return }
             switch currentWeatherResult {
@@ -73,7 +73,7 @@ extension MainScreenInteractor: MainScreenBusinessLogic {
         
         forecastSerive.getForecast(longitude: longitude,
                                    latitude: latitude,
-                                   units: UserDefaults.standard.string(forKey: "units") ?? "metric",
+                                   units: UserDefaults.standard.string(forKey: "units") ?? MeasurementsTypes.mertic.rawValue,
                                    language: .ru) { [weak self] forecastResult in
             guard let self else { return }
             switch forecastResult {

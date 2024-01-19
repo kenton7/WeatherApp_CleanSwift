@@ -43,6 +43,11 @@
 		09FD11D62B5A7D770027ABCA /* SearchScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD11D52B5A7D770027ABCA /* SearchScreenInteractor.swift */; };
 		09FD11DB2B5A84910027ABCA /* CurrentWeatherFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD11DA2B5A84910027ABCA /* CurrentWeatherFactory.swift */; };
 		09FD11DE2B5A87B00027ABCA /* RealmWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD11DD2B5A87B00027ABCA /* RealmWorker.swift */; };
+		09FD11E12B5AAA6F0027ABCA /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD11E02B5AAA6F0027ABCA /* SettingsModel.swift */; };
+		09FD11E42B5AAB740027ABCA /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD11E32B5AAB740027ABCA /* SettingsTableViewCell.swift */; };
+		09FD11E62B5AAB9D0027ABCA /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD11E52B5AAB9D0027ABCA /* SettingsPresenter.swift */; };
+		09FD11E82B5AABAF0027ABCA /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD11E72B5AABAF0027ABCA /* SettingsInteractor.swift */; };
+		09FD11EA2B5AB2F50027ABCA /* OtherMeasurementsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD11E92B5AB2F50027ABCA /* OtherMeasurementsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +87,11 @@
 		09FD11D52B5A7D770027ABCA /* SearchScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenInteractor.swift; sourceTree = "<group>"; };
 		09FD11DA2B5A84910027ABCA /* CurrentWeatherFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherFactory.swift; sourceTree = "<group>"; };
 		09FD11DD2B5A87B00027ABCA /* RealmWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmWorker.swift; sourceTree = "<group>"; };
+		09FD11E02B5AAA6F0027ABCA /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		09FD11E32B5AAB740027ABCA /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		09FD11E52B5AAB9D0027ABCA /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		09FD11E72B5AABAF0027ABCA /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
+		09FD11E92B5AB2F50027ABCA /* OtherMeasurementsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherMeasurementsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +200,11 @@
 		0939C1172B5962220069E3C8 /* SettingsScreen */ = {
 			isa = PBXGroup;
 			children = (
+				09FD11E22B5AAB690027ABCA /* Cell */,
+				09FD11DF2B5AAA680027ABCA /* Model */,
 				0939C1182B5962390069E3C8 /* SettingsVC.swift */,
+				09FD11E52B5AAB9D0027ABCA /* SettingsPresenter.swift */,
+				09FD11E72B5AABAF0027ABCA /* SettingsInteractor.swift */,
 			);
 			path = SettingsScreen;
 			sourceTree = "<group>";
@@ -315,6 +329,23 @@
 			path = Worker;
 			sourceTree = "<group>";
 		};
+		09FD11DF2B5AAA680027ABCA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				09FD11E02B5AAA6F0027ABCA /* SettingsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		09FD11E22B5AAB690027ABCA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				09FD11E32B5AAB740027ABCA /* SettingsTableViewCell.swift */,
+				09FD11E92B5AB2F50027ABCA /* OtherMeasurementsCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -397,6 +428,7 @@
 				0939C1262B5965E10069E3C8 /* URLRequestConvertable.swift in Sources */,
 				0939C1332B597EF70069E3C8 /* MainCollectionViewCellViewModel.swift in Sources */,
 				0939C1482B598ADF0069E3C8 /* GetWeatherImage.swift in Sources */,
+				09FD11E82B5AABAF0027ABCA /* SettingsInteractor.swift in Sources */,
 				09FD11D42B5A7D6D0027ABCA /* SearchScreenPresenter.swift in Sources */,
 				0939C1202B5965A00069E3C8 /* CurrentWeatherFetch.swift in Sources */,
 				09FD11DB2B5A84910027ABCA /* CurrentWeatherFactory.swift in Sources */,
@@ -416,12 +448,16 @@
 				0939C13A2B597FF80069E3C8 /* ForecastModel.swift in Sources */,
 				0939C0F72B5960430069E3C8 /* AppDelegate.swift in Sources */,
 				09FD11DE2B5A87B00027ABCA /* RealmWorker.swift in Sources */,
+				09FD11E12B5AAA6F0027ABCA /* SettingsModel.swift in Sources */,
 				0939C11D2B59649C0069E3C8 /* MainScreenInteractor.swift in Sources */,
 				0939C1222B5965B10069E3C8 /* ForecastFetch.swift in Sources */,
 				0939C1102B5961C30069E3C8 /* TabBarView.swift in Sources */,
+				09FD11E42B5AAB740027ABCA /* SettingsTableViewCell.swift in Sources */,
 				0939C1192B5962390069E3C8 /* SettingsVC.swift in Sources */,
+				09FD11EA2B5AB2F50027ABCA /* OtherMeasurementsCell.swift in Sources */,
 				0939C13D2B5980270069E3C8 /* Geocoding.swift in Sources */,
 				0939C0F92B5960430069E3C8 /* SceneDelegate.swift in Sources */,
+				09FD11E62B5AAB9D0027ABCA /* SettingsPresenter.swift in Sources */,
 				0939C1462B598AC30069E3C8 /* CalculateMeasurements.swift in Sources */,
 				0939C1162B5962170069E3C8 /* SearchVC.swift in Sources */,
 			);
