@@ -234,13 +234,6 @@ final class ForecastVC: UIViewController {
         setup()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        guard let latitude, let longitude else { return }
-        //viewModel.getForeast(longitude: longitude, latitude: latitude)
-    }
-    
     private func setup() {
         let viewController = self
         let presenter = ForecastPresenter()
@@ -355,5 +348,4 @@ extension ForecastVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-    
 }

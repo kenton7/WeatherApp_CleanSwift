@@ -46,8 +46,7 @@ extension ForecastInteractor: ForecastScreenBusinessLogic {
             case .success(let forecast):
                 let calendar = Calendar.current
                 let df = DateFormatter()
-                
-                let factory = ForecastFactory.makeForecastModelArray(forecast)
+
 
                 for _ in forecast.list! {
                     //Фильтруем дату для каждого дня в определенное время,
