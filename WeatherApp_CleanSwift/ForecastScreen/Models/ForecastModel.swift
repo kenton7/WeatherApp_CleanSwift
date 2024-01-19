@@ -12,6 +12,32 @@ protocol WeatherModelProtocol {
     var city: City? { get }
 }
 
+struct ForecastModelNew {
+    var maxTemp: Int
+    var minTemp: Int
+    var weatherID: Int
+    //var weatherDescription: String
+    var weatherDescriptionFromServer: String = ""
+    /// Вычисляемое свойство для регулировки описания погоды, если в описании погоды 2 и более слова, так как с сервера приходит все с маленькой буквы
+    var weatherDescriptionComputed: String {
+        get {
+            var finalStr = ""
+            let separated = weatherDescriptionFromServer.components(separatedBy: " ")
+            let descriptionCapitalaized = "\(separated[0].capitalized)\n\(separated.last ?? "")"
+            if separated.count == 2 {
+                finalStr = descriptionCapitalaized
+            } else if separated.count == 3 {
+                finalStr = "\(separated[0].capitalized) \(separated[1])\n\(separated.last ?? "")"
+            } else {
+                finalStr = weatherDescriptionFromServer.prefix(1).uppercased() + (weatherDescriptionFromServer.lowercased().dropFirst())
+            }
+            return finalStr
+        }
+    }
+    var date: String
+    var dayOrNight: String
+}
+
 struct ForecastModel: Codable, WeatherModelProtocol {
     var list: [List]?
     var city: City?

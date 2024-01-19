@@ -29,6 +29,7 @@ class CurrentWeatherFetch {
                 let weather = try! JSONDecoder().decode(CurrentWeatherModel.self, from: data)
                 completion(.success(weather))
             case .failure(let error):
+                print("ERROR: \(error.localizedDescription)")
                 completion(.failure(error))
             }
         }

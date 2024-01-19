@@ -230,18 +230,17 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        let factory: ViewControllerFactory = ForecastViewControllerFactory()
-//        let forecastVC = factory.makeForecastViewController() as! ForecastVC
-//        forecastVC.hidesBottomBarWhenPushed = false
-//        let transferData = viewModel.forecastRealm[indexPath.section]
-//        forecastVC.longitude = transferData.longitude
-//        forecastVC.latitude = transferData.latitude
-//        forecastVC.weatherImage.image = GetWeatherImage.weatherImages(id: transferData.id, pod: transferData.dayOrNight)
-////        viewModel.didSelectRow(indexPath: indexPath, data: viewModel.forecastRealm[indexPath.section])
-//        navigationController?.pushViewController(forecastVC, animated: true)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let forecastVC = ForecastVC()
+        forecastVC.hidesBottomBarWhenPushed = false
+        let transferData = forecastRealm[indexPath.section]
+        forecastVC.longitude = transferData.longitude
+        forecastVC.latitude = transferData.latitude
+        forecastVC.weatherImage.image = GetWeatherImage.weatherImages(id: transferData.id, pod: transferData.dayOrNight)
+//        viewModel.didSelectRow(indexPath: indexPath, data: viewModel.forecastRealm[indexPath.section])
+        navigationController?.pushViewController(forecastVC, animated: true)
+    }
 }
 
 extension SearchVC: UISearchBarDelegate {

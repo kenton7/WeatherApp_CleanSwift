@@ -20,7 +20,7 @@ class MainScreenInteractor {
     
     var presenter: MainScreenPresentationLogic?
     let currentWeatherNetworkService = CurrentWeatherFetch()
-    let forecastSerive = ForecastFetch()
+    let forecastService = ForecastFetch()
     var coordinates: Coordinates?
     var units: String?
     
@@ -71,7 +71,7 @@ extension MainScreenInteractor: MainScreenBusinessLogic {
         
         var forecastDataSource = [List]()
         
-        forecastSerive.getForecast(longitude: longitude,
+        forecastService.getForecast(longitude: longitude,
                                    latitude: latitude,
                                    units: UserDefaults.standard.string(forKey: "units") ?? MeasurementsTypes.mertic.rawValue,
                                    language: .ru) { [weak self] forecastResult in
