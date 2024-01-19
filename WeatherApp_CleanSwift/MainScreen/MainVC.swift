@@ -396,7 +396,9 @@ extension MainVC: MainViewControllerDisplayLogic {
     func displayForecast(data: [List]) {
         dataToDisplay.removeAll()
         dataToDisplay.append(contentsOf: data)
-        collectionView.reloadData()
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
 }
 
@@ -496,11 +498,11 @@ extension MainVC: CLLocationManagerDelegate {
         } catch {
             print("Error encoding coordinates: \(error)")
         }
-        self.spinner.isHidden = false
         interactor?.fetchCurrentWeather(latitude: locValue.latitude, longitude: locValue.longitude)
         interactor?.fetchForecast(latitude: locValue.latitude, longitude: locValue.longitude)
         manager.stopUpdatingLocation()
         self.spinner.stopAnimation()
+        self.spinner.isHidden = true
     }
 }
 

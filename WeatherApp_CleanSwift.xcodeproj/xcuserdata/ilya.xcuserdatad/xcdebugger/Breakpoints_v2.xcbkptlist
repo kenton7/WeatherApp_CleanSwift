@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "99E7EA1D-5FA6-48FC-BCCF-73842C5FAC75"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15D45BE4-3EA4-4977-8C7C-D52EC807C579"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherApp_CleanSwift/SearchScreen/SearchScreenInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "updateWeatherIn(city:indexPath:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "15D45BE4-3EA4-4977-8C7C-D52EC807C579 - d4837ff50929e61f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;WeatherApp_CleanSwift.GeocodingElement&gt;, Swift.Error&gt;) -&gt; () in WeatherApp_CleanSwift.SearchScreenInteractor.updateWeatherIn(city: Swift.String, indexPath: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WeatherApp_CleanSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilya/Desktop/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B%20Xcode/WeatherApp_CleanSwift/WeatherApp_CleanSwift/SearchScreen/SearchScreenInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  uuid = "15D45BE4-3EA4-4977-8C7C-D52EC807C579 - 832538f599c073b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp_CleanSwift.SearchScreenInteractor.updateWeatherIn(city: Swift.String, indexPath: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WeatherApp_CleanSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilya/Desktop/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B%20Xcode/WeatherApp_CleanSwift/WeatherApp_CleanSwift/SearchScreen/SearchScreenInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "15D45BE4-3EA4-4977-8C7C-D52EC807C579 - d4837ff50929e61f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;WeatherApp_CleanSwift.GeocodingElement&gt;, Swift.Error&gt;) -&gt; () in WeatherApp_CleanSwift.SearchScreenInteractor.updateWeatherIn(city: Swift.String, indexPath: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WeatherApp_CleanSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilya/Desktop/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B%20Xcode/WeatherApp_CleanSwift/WeatherApp_CleanSwift/SearchScreen/SearchScreenInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "204">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

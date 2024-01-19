@@ -37,6 +37,12 @@
 		0939C1482B598ADF0069E3C8 /* GetWeatherImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939C1472B598ADF0069E3C8 /* GetWeatherImage.swift */; };
 		09FD11CA2B5997B60027ABCA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 09FD11C92B5997B60027ABCA /* Realm */; };
 		09FD11CC2B5997B60027ABCA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 09FD11CB2B5997B60027ABCA /* RealmSwift */; };
+		09FD11CF2B5A7BCE0027ABCA /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD11CE2B5A7BCE0027ABCA /* SearchTableViewCell.swift */; };
+		09FD11D22B5A7C690027ABCA /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD11D12B5A7C690027ABCA /* RealmModel.swift */; };
+		09FD11D42B5A7D6D0027ABCA /* SearchScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD11D32B5A7D6D0027ABCA /* SearchScreenPresenter.swift */; };
+		09FD11D62B5A7D770027ABCA /* SearchScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD11D52B5A7D770027ABCA /* SearchScreenInteractor.swift */; };
+		09FD11DB2B5A84910027ABCA /* CurrentWeatherFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD11DA2B5A84910027ABCA /* CurrentWeatherFactory.swift */; };
+		09FD11DE2B5A87B00027ABCA /* RealmWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD11DD2B5A87B00027ABCA /* RealmWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +76,12 @@
 		0939C1422B59879F0069E3C8 /* ForecastFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastFactory.swift; sourceTree = "<group>"; };
 		0939C1452B598AC30069E3C8 /* CalculateMeasurements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateMeasurements.swift; sourceTree = "<group>"; };
 		0939C1472B598ADF0069E3C8 /* GetWeatherImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWeatherImage.swift; sourceTree = "<group>"; };
+		09FD11CE2B5A7BCE0027ABCA /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		09FD11D12B5A7C690027ABCA /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		09FD11D32B5A7D6D0027ABCA /* SearchScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenPresenter.swift; sourceTree = "<group>"; };
+		09FD11D52B5A7D770027ABCA /* SearchScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenInteractor.swift; sourceTree = "<group>"; };
+		09FD11DA2B5A84910027ABCA /* CurrentWeatherFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherFactory.swift; sourceTree = "<group>"; };
+		09FD11DD2B5A87B00027ABCA /* RealmWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +116,8 @@
 		0939C0F52B5960430069E3C8 /* WeatherApp_CleanSwift */ = {
 			isa = PBXGroup;
 			children = (
+				09FD11DC2B5A87A20027ABCA /* Worker */,
+				09FD11D02B5A7C5D0027ABCA /* RealmModel */,
 				0939C1442B598AB00069E3C8 /* Helpers */,
 				0939C1412B5987970069E3C8 /* Factory */,
 				0939C13E2B5982150069E3C8 /* Coordinates */,
@@ -164,8 +178,11 @@
 		0939C1142B5962000069E3C8 /* SearchScreen */ = {
 			isa = PBXGroup;
 			children = (
+				09FD11CD2B5A7BBA0027ABCA /* Cell */,
 				0939C13B2B5980120069E3C8 /* Models */,
 				0939C1152B5962170069E3C8 /* SearchVC.swift */,
+				09FD11D32B5A7D6D0027ABCA /* SearchScreenPresenter.swift */,
+				09FD11D52B5A7D770027ABCA /* SearchScreenInteractor.swift */,
 			);
 			path = SearchScreen;
 			sourceTree = "<group>";
@@ -260,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				0939C1422B59879F0069E3C8 /* ForecastFactory.swift */,
+				09FD11DA2B5A84910027ABCA /* CurrentWeatherFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -271,6 +289,30 @@
 				0939C1472B598ADF0069E3C8 /* GetWeatherImage.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		09FD11CD2B5A7BBA0027ABCA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				09FD11CE2B5A7BCE0027ABCA /* SearchTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		09FD11D02B5A7C5D0027ABCA /* RealmModel */ = {
+			isa = PBXGroup;
+			children = (
+				09FD11D12B5A7C690027ABCA /* RealmModel.swift */,
+			);
+			path = RealmModel;
+			sourceTree = "<group>";
+		};
+		09FD11DC2B5A87A20027ABCA /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				09FD11DD2B5A87B00027ABCA /* RealmWorker.swift */,
+			);
+			path = Worker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,15 +392,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09FD11D62B5A7D770027ABCA /* SearchScreenInteractor.swift in Sources */,
 				0939C0FB2B5960430069E3C8 /* MainVC.swift in Sources */,
 				0939C1262B5965E10069E3C8 /* URLRequestConvertable.swift in Sources */,
 				0939C1332B597EF70069E3C8 /* MainCollectionViewCellViewModel.swift in Sources */,
 				0939C1482B598ADF0069E3C8 /* GetWeatherImage.swift in Sources */,
+				09FD11D42B5A7D6D0027ABCA /* SearchScreenPresenter.swift in Sources */,
 				0939C1202B5965A00069E3C8 /* CurrentWeatherFetch.swift in Sources */,
+				09FD11DB2B5A84910027ABCA /* CurrentWeatherFactory.swift in Sources */,
 				0939C1242B5965C80069E3C8 /* RestApiClient.swift in Sources */,
+				09FD11D22B5A7C690027ABCA /* RealmModel.swift in Sources */,
 				0939C1282B5965F30069E3C8 /* WeatherEndpoints.swift in Sources */,
 				0939C12D2B597B710069E3C8 /* CustomSpinner.swift in Sources */,
 				0939C1432B59879F0069E3C8 /* ForecastFactory.swift in Sources */,
+				09FD11CF2B5A7BCE0027ABCA /* SearchTableViewCell.swift in Sources */,
 				0939C1132B5961E60069E3C8 /* Extensions.swift in Sources */,
 				0939C11B2B59638A0069E3C8 /* MainScreenPresenter.swift in Sources */,
 				0939C12A2B5966020069E3C8 /* GeoService.swift in Sources */,
@@ -368,6 +415,7 @@
 				0939C1362B597F8D0069E3C8 /* CurrentWeatherModel.swift in Sources */,
 				0939C13A2B597FF80069E3C8 /* ForecastModel.swift in Sources */,
 				0939C0F72B5960430069E3C8 /* AppDelegate.swift in Sources */,
+				09FD11DE2B5A87B00027ABCA /* RealmWorker.swift in Sources */,
 				0939C11D2B59649C0069E3C8 /* MainScreenInteractor.swift in Sources */,
 				0939C1222B5965B10069E3C8 /* ForecastFetch.swift in Sources */,
 				0939C1102B5961C30069E3C8 /* TabBarView.swift in Sources */,
